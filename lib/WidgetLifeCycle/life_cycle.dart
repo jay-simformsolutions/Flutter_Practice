@@ -19,17 +19,22 @@ class _WidgetLifeCycleState extends State<WidgetLifeCycle> with SingleTickerProv
   AnimationController? _animationController;
 
 
-  @override
-  void initState() {
-    super.initState();
-    print('Widget Lifecycle: initState');
-    _animationController = AnimationController(vsync: this);
-  }
+
 
   @override
   void didChangeDependencies() {
     print('Widget Lifecycle: didChangeDependencies');
     super.didChangeDependencies();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print('Widget Lifecycle: initState');
+    _animationController = AnimationController(vsync: this);
+    Future.delayed(Duration.zero).then((value){
+      MediaQuery.of(context).size;
+    });
   }
 
   @override

@@ -108,20 +108,42 @@
 // For Path Provider
 
 
-import 'package:flutter/material.dart';
-import 'package:practice_app/PathProvider/path_provider.dart';
+// import 'package:flutter/material.dart';
+// import 'package:practice_app/PathProvider/path_provider.dart';
+//
+// void main(){
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: PathProvider(storage: Storage(),),
+//       debugShowCheckedModeBanner: false,
+//     );
+//   }
+// }
 
-void main(){
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+
+// FOr the MediaQuery
+ import 'package:flutter/material.dart';
+
+import 'MediaQuery_InheritedWidget/mediaquery.dart';
+
+void main() => runApp(Home());
+
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PathProvider(storage: Storage(),),
+      home: MediaQueryHome(),
       debugShowCheckedModeBanner: false,
     );
   }
